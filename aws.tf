@@ -21,20 +21,8 @@ provider "aws" {
 
 provider "aws" {
   version = "1.55"
-  region  = "eu-west-2"
-  alias   = "eu-west-2"
-}
-
-provider "aws" {
-  version = "1.55"
   region  = "us-west-2"
   alias   = "us-west-2"
-}
-
-provider "aws" {
-  version = "1.55"
-  region  = "us-east-2"
-  alias   = "us-east-2"
 }
 
 provider "aws" {
