@@ -138,6 +138,9 @@ workflows:
       - validate_and_plan:
           context: ae-infra-manage
           requires: []
+          filters:
+            branches:
+              ignore: master
 
   deploy:
     jobs:
