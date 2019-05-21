@@ -1,4 +1,3 @@
 # Aeternity testnet infrastructure configuration
 
-## Local testing
-
+Refer to CircleCI configuration for testing examples.
