@@ -2,7 +2,7 @@ module "aws_deploy-ap-southeast-1" {
   source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v1.0.0"
   env               = "uat"
   color             = "blue"
-  bootstrap_version = "v2.2.0"
+  bootstrap_version = "${var.bootstrap_version}"
   vault_role        = "ae-node"
   vault_addr        = "${var.vault_addr}"
 
@@ -14,7 +14,7 @@ module "aws_deploy-ap-southeast-1" {
   ami_name      = "aeternity-ubuntu-16.04-v1549009934"
 
   aeternity = {
-    package = "https://releases.ops.aeternity.com/aeternity-3.0.0-rc.1-ubuntu-x86_64.tar.gz"
+    package = "${var.package}"
   }
 
   providers = {
@@ -26,7 +26,7 @@ module "aws_deploy-eu-central-1" {
   source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v1.0.0"
   env               = "uat"
   color             = "blue"
-  bootstrap_version = "v2.2.0"
+  bootstrap_version = "${var.bootstrap_version}"
   vault_role        = "ae-node"
   vault_addr        = "${var.vault_addr}"
 
@@ -38,7 +38,7 @@ module "aws_deploy-eu-central-1" {
   ami_name      = "aeternity-ubuntu-16.04-v1549009934"
 
   aeternity = {
-    package = "https://releases.ops.aeternity.com/aeternity-3.0.0-rc.1-ubuntu-x86_64.tar.gz"
+    package = "${var.package}"
   }
 
   providers = {
@@ -52,7 +52,7 @@ module "aws_deploy-us-west-2" {
   source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v1.0.0"
   env               = "uat"
   color             = "green"
-  bootstrap_version = "v2.2.0"
+  bootstrap_version = "${var.bootstrap_version}"
   vault_role        = "ae-node"
   vault_addr        = "${var.vault_addr}"
 
@@ -64,7 +64,7 @@ module "aws_deploy-us-west-2" {
   ami_name      = "aeternity-ubuntu-16.04-v1549009934"
 
   aeternity = {
-    package = "https://releases.ops.aeternity.com/aeternity-3.0.0-rc.1-ubuntu-x86_64.tar.gz"
+    package = "${var.package}"
   }
 
   providers = {
@@ -76,7 +76,7 @@ module "aws_deploy-uat-eu-north-1" {
   source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v1.0.0"
   env               = "uat"
   color             = "green"
-  bootstrap_version = "v2.2.0"
+  bootstrap_version = "${var.bootstrap_version}"
   vault_role        = "ae-node"
   vault_addr        = "${var.vault_addr}"
 
@@ -88,7 +88,7 @@ module "aws_deploy-uat-eu-north-1" {
   ami_name      = "aeternity-ubuntu-16.04-v1549009934"
 
   aeternity = {
-    package = "https://releases.ops.aeternity.com/aeternity-3.0.0-rc.1-ubuntu-x86_64.tar.gz"
+    package = "${var.package}"
   }
 
   providers = {
