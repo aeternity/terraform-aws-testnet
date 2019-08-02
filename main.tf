@@ -118,8 +118,8 @@ module "aws_deploy-uat_mon-ap-southeast-1" {
   vault_role        = "ae-node"
   vault_addr        = var.vault_addr
 
-  static_nodes = 0
-  spot_nodes   = 1
+  spot_nodes_min = 1
+  spot_nodes_max = 1
 
   spot_price    = "0.03"
   instance_type = "t3.medium"
@@ -145,8 +145,8 @@ module "aws_deploy-uat_mon-eu-central-1" {
   vault_role        = "ae-node"
   vault_addr        = var.vault_addr
 
-  static_nodes = 0
-  spot_nodes   = 1
+  spot_nodes_min = 1
+  spot_nodes_max = 1
 
   spot_price    = "0.03"
   instance_type = "t3.medium"
@@ -172,8 +172,8 @@ module "aws_deploy-uat_mon-us-west-2" {
   vault_role        = "ae-node"
   vault_addr        = var.vault_addr
 
-  static_nodes = 0
-  spot_nodes   = 1
+  spot_nodes_min = 1
+  spot_nodes_max = 1
 
   spot_price    = "0.03"
   instance_type = "t3.medium"
@@ -199,8 +199,8 @@ module "aws_deploy-uat_mon-eu-north-1" {
   vault_role        = "ae-node"
   vault_addr        = var.vault_addr
 
-  static_nodes = 0
-  spot_nodes   = 1
+  spot_nodes_min = 1
+  spot_nodes_max = 1
 
   spot_price    = "0.03"
   instance_type = "t3.medium"
