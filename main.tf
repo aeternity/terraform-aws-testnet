@@ -12,7 +12,7 @@ module "aws_deploy-ap-southeast-1" {
 
   additional_storage      = true
   additional_storage_size = 30
-  snapshot_filename       = "mnesia_uat_v-1_latest.gz"
+  snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
   instance_type = "m4.large"
@@ -41,7 +41,7 @@ module "aws_deploy-eu-central-1" {
 
   additional_storage      = true
   additional_storage_size = 30
-  snapshot_filename       = "mnesia_uat_v-1_latest.gz"
+  snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
   instance_type = "m4.large"
@@ -70,7 +70,7 @@ module "aws_deploy-us-west-2" {
 
   additional_storage      = true
   additional_storage_size = 30
-  snapshot_filename       = "mnesia_uat_v-1_latest.gz"
+  snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
   instance_type = "m5.large"
@@ -99,7 +99,7 @@ module "aws_deploy-uat-eu-north-1" {
 
   additional_storage      = true
   additional_storage_size = 30
-  snapshot_filename       = "mnesia_uat_v-1_latest.gz"
+  snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
   instance_type = "m5.large"
@@ -127,6 +127,7 @@ module "aws_deploy-uat_mon-ap-southeast-1" {
 
   additional_storage      = true
   additional_storage_size = 30
+  snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
   instance_type = "t3.medium"
@@ -154,7 +155,7 @@ module "aws_deploy-uat_mon-eu-central-1" {
 
   additional_storage      = true
   additional_storage_size = 30
-  snapshot_filename       = "mnesia_uat_v-1_latest.gz"
+  snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
   instance_type = "t3.medium"
@@ -182,7 +183,7 @@ module "aws_deploy-uat_mon-us-west-2" {
 
   additional_storage      = true
   additional_storage_size = 30
-  snapshot_filename       = "mnesia_uat_v-1_latest.gz"
+  snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
   instance_type = "t3.medium"
@@ -210,7 +211,7 @@ module "aws_deploy-uat_mon-eu-north-1" {
 
   additional_storage      = true
   additional_storage_size = 30
-  snapshot_filename       = "mnesia_uat_v-1_latest.gz"
+  snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
   instance_type = "t3.medium"
