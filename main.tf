@@ -12,14 +12,14 @@ module "aws_deploy-ap-southeast-1" {
 
   additional_storage      = true
   additional_storage_size = 30
-  snapshot_filename       = "mnesia_uat_v-1_54.255.167.41_uat_db_backup_1569308314.tgz"
+  snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
   instance_type = "m4.large"
   ami_name      = "aeternity-ubuntu-16.04-v1549009934"
 
   aeternity = {
-    package = "https://releases.aeternity.io/aeternity-5.0.0-rc.6-ubuntu-x86_64.tar.gz"
+    package = var.package
   }
 
   providers = {
@@ -41,14 +41,14 @@ module "aws_deploy-eu-central-1" {
 
   additional_storage      = true
   additional_storage_size = 30
-  snapshot_filename       = "mnesia_uat_v-1_54.255.167.41_uat_db_backup_1569308314.tgz"
+  snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
   instance_type = "m4.large"
   ami_name      = "aeternity-ubuntu-16.04-v1549009934"
 
   aeternity = {
-    package = "https://releases.aeternity.io/aeternity-5.0.0-rc.6-ubuntu-x86_64.tar.gz"
+    package = var.package
   }
 
   providers = {
