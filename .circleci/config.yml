@@ -71,12 +71,12 @@ commands:
               -var vault_addr=${VAULT_ADDR:?} \
               << parameters.path >> | tee terraform-plan-info
 
-            export TERRAFORM_PLAN_INFO=$(cat terraform-plan-info | grep Plan:)
+            export TERRAFORM_PLAN_INFO="$(cat terraform-plan-info | grep Plan:)"
             curl -X POST \
               -H "Authorization: token ${GITHUB_TOKEN}" \
               -d '{
                 "state": "success",
-                "target_url": "'""${CIRCLE_BUILD_URL}""'",
+                "target_url": "'"${CIRCLE_BUILD_URL}"'",
                 "description": "'"$TERRAFORM_PLAN_INFO"'",
                 "context": "terraform plan"
               }' \
