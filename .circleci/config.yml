@@ -70,8 +70,10 @@ commands:
               -out=<< parameters.out >> \
               -var vault_addr=${VAULT_ADDR:?} \
               << parameters.path >> | tee terraform-plan-info
-
-            export TERRAFORM_PLAN_INFO=$(printf "'%s'" "$(cat terraform-plan-info | grep Plan:)")
+      - run:
+          name: Add status check to Github
+          command: |
+            export TERRAFORM_PLAN_INFO=$(printf "%s" "$(cat terraform-plan-info | grep Plan:)")
             curl -X POST \
               -H "Authorization: token ${GITHUB_TOKEN}" \
               -d '{
@@ -81,6 +83,7 @@ commands:
                 "context": "terraform plan"
               }' \
               https://api.github.com/repos/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}/statuses/${CIRCLE_SHA1}
+
       - persist_to_workspace:
           root: << parameters.plans_workspace >>
           paths:
