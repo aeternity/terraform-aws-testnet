@@ -70,9 +70,7 @@ commands:
               -out=<< parameters.out >> \
               -var vault_addr=${VAULT_ADDR:?} \
               << parameters.path >> | tee terraform-plan-info
-      - run:
-          name: Add status check to Github
-          command: |
+
             export TERRAFORM_PLAN_INFO=$(printf "%s" "$(cat terraform-plan-info | grep Plan: | sed 's/\x1b\[[0-9;]*[a-zA-Z]//g')")
             curl -X POST \
               -H "Authorization: token ${GITHUB_TOKEN}" \
