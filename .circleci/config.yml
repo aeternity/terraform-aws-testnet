@@ -77,7 +77,7 @@ commands:
               -d '{
                 "state": "success",
                 "target_url": "'"${CIRCLE_BUILD_URL}"'",
-                "description": "'"$TERRAFORM_PLAN_INFO"'",
+                "description": "'"${TERRAFORM_PLAN_INFO}"'",
                 "context": "terraform plan"
               }' \
               https://api.github.com/repos/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}/statuses/${CIRCLE_SHA1}
