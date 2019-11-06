@@ -236,7 +236,6 @@ module "aws_deploy-uat_backup-eu-central-1" {
   bootstrap_version = var.bootstrap_version
   vault_role        = "ae-node"
   vault_addr        = var.vault_addr
-  node_config       = "secret/aenode/config/uat_backup@eu-central-1"
 
   spot_nodes_min = 1
   spot_nodes_max = 1
