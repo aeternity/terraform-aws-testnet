@@ -7,8 +7,8 @@ module "aws_deploy-ap-southeast-1" {
   vault_addr        = var.vault_addr
 
   static_nodes   = 1
-  spot_nodes_min = 9
-  spot_nodes_max = 9
+  spot_nodes_min = 4
+  spot_nodes_max = 4
 
   additional_storage      = true
   additional_storage_size = 30
@@ -36,8 +36,8 @@ module "aws_deploy-eu-central-1" {
   vault_addr        = var.vault_addr
 
   static_nodes   = 1
-  spot_nodes_min = 9
-  spot_nodes_max = 9
+  spot_nodes_min = 4
+  spot_nodes_max = 4
 
   additional_storage      = true
   additional_storage_size = 30
@@ -65,8 +65,8 @@ module "aws_deploy-us-west-2" {
   vault_addr        = var.vault_addr
 
   static_nodes   = 1
-  spot_nodes_min = 9
-  spot_nodes_max = 9
+  spot_nodes_min = 4
+  spot_nodes_max = 4
 
   additional_storage      = true
   additional_storage_size = 30
@@ -94,8 +94,8 @@ module "aws_deploy-uat-eu-north-1" {
   vault_addr        = var.vault_addr
 
   static_nodes   = 1
-  spot_nodes_min = 9
-  spot_nodes_max = 9
+  spot_nodes_min = 4
+  spot_nodes_max = 4
 
   additional_storage      = true
   additional_storage_size = 30
