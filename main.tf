@@ -11,7 +11,7 @@ module "aws_deploy-ap-southeast-1" {
   spot_nodes_max = 4
 
   additional_storage      = true
-  additional_storage_size = 30
+  additional_storage_size = 60
   snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
@@ -40,7 +40,7 @@ module "aws_deploy-eu-central-1" {
   spot_nodes_max = 4
 
   additional_storage      = true
-  additional_storage_size = 30
+  additional_storage_size = 60
   snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
@@ -69,7 +69,7 @@ module "aws_deploy-us-west-2" {
   spot_nodes_max = 4
 
   additional_storage      = true
-  additional_storage_size = 30
+  additional_storage_size = 60
   snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
@@ -98,7 +98,7 @@ module "aws_deploy-uat-eu-north-1" {
   spot_nodes_max = 4
 
   additional_storage      = true
-  additional_storage_size = 30
+  additional_storage_size = 60
   snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
@@ -127,7 +127,7 @@ module "aws_deploy-uat_mon-ap-southeast-1" {
   spot_nodes_max = 1
 
   additional_storage      = true
-  additional_storage_size = 30
+  additional_storage_size = 60
   snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
@@ -156,7 +156,7 @@ module "aws_deploy-uat_mon-eu-central-1" {
   spot_nodes_max = 1
 
   additional_storage      = true
-  additional_storage_size = 30
+  additional_storage_size = 60
   snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
@@ -185,7 +185,7 @@ module "aws_deploy-uat_mon-us-west-2" {
   spot_nodes_max = 1
 
   additional_storage      = true
-  additional_storage_size = 30
+  additional_storage_size = 60
   snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
@@ -214,7 +214,7 @@ module "aws_deploy-uat_mon-eu-north-1" {
   spot_nodes_max = 1
 
   additional_storage      = true
-  additional_storage_size = 30
+  additional_storage_size = 60
   snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
