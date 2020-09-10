@@ -11,7 +11,7 @@ module "aws_deploy-ap-southeast-1" {
   spot_nodes_max = 4
 
   additional_storage      = true
-  additional_storage_size = 60
+  additional_storage_size = 120
   snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
@@ -40,7 +40,7 @@ module "aws_deploy-eu-central-1" {
   spot_nodes_max = 4
 
   additional_storage      = true
-  additional_storage_size = 60
+  additional_storage_size = 120
   snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
@@ -69,7 +69,7 @@ module "aws_deploy-us-west-2" {
   spot_nodes_max = 4
 
   additional_storage      = true
-  additional_storage_size = 60
+  additional_storage_size = 120
   snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
@@ -98,7 +98,7 @@ module "aws_deploy-uat-eu-north-1" {
   spot_nodes_max = 4
 
   additional_storage      = true
-  additional_storage_size = 60
+  additional_storage_size = 120
   snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
@@ -127,7 +127,7 @@ module "aws_deploy-uat_mon-ap-southeast-1" {
   spot_nodes_max = 1
 
   additional_storage      = true
-  additional_storage_size = 60
+  additional_storage_size = 120
   snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
@@ -156,7 +156,7 @@ module "aws_deploy-uat_mon-eu-central-1" {
   spot_nodes_max = 1
 
   additional_storage      = true
-  additional_storage_size = 60
+  additional_storage_size = 120
   snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
@@ -185,7 +185,7 @@ module "aws_deploy-uat_mon-us-west-2" {
   spot_nodes_max = 1
 
   additional_storage      = true
-  additional_storage_size = 60
+  additional_storage_size = 120
   snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
@@ -214,7 +214,7 @@ module "aws_deploy-uat_mon-eu-north-1" {
   spot_nodes_max = 1
 
   additional_storage      = true
-  additional_storage_size = 60
+  additional_storage_size = 120
   snapshot_filename       = "mnesia_uat_v-1_latest.tgz"
 
   spot_price    = "0.07"
@@ -247,7 +247,7 @@ module "aws_deploy-uat_backup-eu-central-1" {
   ami_name      = "aeternity-ubuntu-16.04-v1549009934"
 
   additional_storage      = true
-  additional_storage_size = 100
+  additional_storage_size = 180
   snapshot_filename       = "empty"
 
   aeternity = {
