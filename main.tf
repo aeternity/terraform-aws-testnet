@@ -258,3 +258,53 @@ module "aws_deploy-uat_backup-eu-central-1" {
     aws = "aws.eu-central-1"
   }
 }
+
+module "aws_deploy-uat_backup_full-eu-central-1" {
+  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.5.0"
+  env               = "uat_backup"
+  kind              = "full"
+  bootstrap_version = var.bootstrap_version
+  vault_role        = "ae-node"
+  vault_addr        = var.vault_addr
+  node_config       = "secret/aenode/config/uat_backup_full"
+  aeternity         = { package = "unused" }
+
+  spot_nodes_min = 1
+  spot_nodes_max = 1
+
+  spot_price    = "0.07"
+  instance_type = "t3.medium"
+  ami_name      = "aeternity-ubuntu-18.04-v1616681631"
+
+  additional_storage      = true
+  additional_storage_size = 180
+
+  providers = {
+    aws = "aws.eu-central-1"
+  }
+}
+
+module "aws_deploy-uat_backup_light-eu-central-1" {
+  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.5.0"
+  env               = "uat_backup"
+  kind              = "light"
+  bootstrap_version = var.bootstrap_version
+  vault_role        = "ae-node"
+  vault_addr        = var.vault_addr
+  node_config       = "secret/aenode/config/uat_backup_light"
+  aeternity         = { package = "unused" }
+
+  spot_nodes_min = 1
+  spot_nodes_max = 1
+
+  spot_price    = "0.07"
+  instance_type = "t3.medium"
+  ami_name      = "aeternity-ubuntu-18.04-v1616681631"
+
+  additional_storage      = true
+  additional_storage_size = 180
+
+  providers = {
+    aws = "aws.eu-central-1"
+  }
+}
