@@ -23,7 +23,7 @@ module "aws_deploy-ap-southeast-1" {
   }
 
   providers = {
-    aws = "aws.ap-southeast-1"
+    aws = aws.ap-southeast-1
   }
 }
 
@@ -52,7 +52,7 @@ module "aws_deploy-eu-central-1" {
   }
 
   providers = {
-    aws = "aws.eu-central-1"
+    aws = aws.eu-central-1
   }
 }
 
@@ -81,7 +81,7 @@ module "aws_deploy-us-west-2" {
   }
 
   providers = {
-    aws = "aws.us-west-2"
+    aws = aws.us-west-2
   }
 }
 
@@ -110,7 +110,7 @@ module "aws_deploy-uat-eu-north-1" {
   }
 
   providers = {
-    aws = "aws.eu-north-1"
+    aws = aws.eu-north-1
   }
 }
 
@@ -139,7 +139,7 @@ module "aws_deploy-uat_mon-ap-southeast-1" {
   }
 
   providers = {
-    aws = "aws.ap-southeast-1"
+    aws = aws.ap-southeast-1
   }
 }
 
@@ -168,7 +168,7 @@ module "aws_deploy-uat_mon-eu-central-1" {
   }
 
   providers = {
-    aws = "aws.eu-central-1"
+    aws = aws.eu-central-1
   }
 }
 
@@ -197,7 +197,7 @@ module "aws_deploy-uat_mon-us-west-2" {
   }
 
   providers = {
-    aws = "aws.us-west-2"
+    aws = aws.us-west-2
   }
 }
 
@@ -226,7 +226,7 @@ module "aws_deploy-uat_mon-eu-north-1" {
   }
 
   providers = {
-    aws = "aws.eu-north-1"
+    aws = aws.eu-north-1
   }
 }
 
@@ -255,7 +255,7 @@ module "aws_deploy-uat_backup-eu-central-1" {
   }
 
   providers = {
-    aws = "aws.eu-central-1"
+    aws = aws.eu-central-1
   }
 }
 
@@ -269,18 +269,15 @@ module "aws_deploy-uat_backup_full-eu-central-1" {
   node_config       = "secret/aenode/config/uat_backup_full"
   aeternity         = { package = "unused" }
 
-  spot_nodes_min = 1
-  spot_nodes_max = 1
-
-  spot_price    = "0.07"
-  instance_type = "t3.medium"
-  ami_name      = "aeternity-ubuntu-18.04-v1616681631"
-
+  static_nodes            = 1
+  spot_price              = 0.00
+  instance_type           = "t3.medium"
+  ami_name                = "aeternity-ubuntu-18.04-v1616681631"
   additional_storage      = true
   additional_storage_size = 180
 
   providers = {
-    aws = "aws.eu-central-1"
+    aws = aws.eu-central-1
   }
 }
 
@@ -294,17 +291,14 @@ module "aws_deploy-uat_backup_light-eu-central-1" {
   node_config       = "secret/aenode/config/uat_backup_light"
   aeternity         = { package = "unused" }
 
-  spot_nodes_min = 1
-  spot_nodes_max = 1
-
-  spot_price    = "0.07"
-  instance_type = "t3.medium"
-  ami_name      = "aeternity-ubuntu-18.04-v1616681631"
-
+  static_nodes            = 1
+  spot_price              = 0.00
+  instance_type           = "t3.medium"
+  ami_name                = "aeternity-ubuntu-18.04-v1616681631"
   additional_storage      = true
   additional_storage_size = 180
 
   providers = {
-    aws = "aws.eu-central-1"
+    aws = aws.eu-central-1
   }
 }
