@@ -199,14 +199,14 @@ module "aws_deploy-uat_backup_full-eu-central-1" {
   vault_addr        = var.vault_addr
   node_config       = "secret/aenode/config/uat_backup_full"
 
-  static_nodes            = 1
+  static_nodes = 1
 
   additional_storage      = true
   additional_storage_size = 180
 
-  spot_price              = 0.00
-  instance_type           = "t3.medium"
-  ami_name                = "aeternity-ubuntu-18.04-v1616681631"
+  spot_price    = 0.00
+  instance_type = "t3.medium"
+  ami_name      = "aeternity-ubuntu-18.04-v1616681631"
 
   providers = {
     aws = aws.eu-central-1
@@ -222,14 +222,14 @@ module "aws_deploy-uat_backup_light-eu-central-1" {
   vault_addr        = var.vault_addr
   node_config       = "secret/aenode/config/uat_backup_light"
 
-  static_nodes            = 1
+  static_nodes = 1
 
   additional_storage      = true
   additional_storage_size = 180
 
-  spot_price              = 0.00
-  instance_type           = "t3.medium"
-  ami_name                = "aeternity-ubuntu-18.04-v1616681631"
+  spot_price    = 0.00
+  instance_type = "t3.medium"
+  ami_name      = "aeternity-ubuntu-18.04-v1616681631"
 
   providers = {
     aws = aws.eu-central-1
