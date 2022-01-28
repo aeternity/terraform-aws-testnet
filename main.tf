@@ -1,5 +1,5 @@
 module "aws_deploy-ap-southeast-1" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.0"
+  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.1"
   env               = "uat"
   color             = "blue"
   bootstrap_version = var.bootstrap_version
@@ -23,7 +23,7 @@ module "aws_deploy-ap-southeast-1" {
 }
 
 module "aws_deploy-eu-central-1" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.0"
+  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.1"
   env               = "uat"
   color             = "blue"
   bootstrap_version = var.bootstrap_version
@@ -47,7 +47,7 @@ module "aws_deploy-eu-central-1" {
 }
 
 module "aws_deploy-us-west-2" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.0"
+  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.1"
   env               = "uat"
   color             = "green"
   bootstrap_version = var.bootstrap_version
@@ -71,7 +71,7 @@ module "aws_deploy-us-west-2" {
 }
 
 module "aws_deploy-uat-eu-north-1" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.0"
+  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.1"
   env               = "uat"
   color             = "green"
   bootstrap_version = var.bootstrap_version
@@ -95,7 +95,7 @@ module "aws_deploy-uat-eu-north-1" {
 }
 
 module "aws_deploy-uat_mon-ap-southeast-1" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.0"
+  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.1"
   env               = "uat_mon"
   color             = "blue"
   bootstrap_version = var.bootstrap_version
@@ -119,7 +119,7 @@ module "aws_deploy-uat_mon-ap-southeast-1" {
 }
 
 module "aws_deploy-uat_mon-eu-central-1" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.0"
+  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.1"
   env               = "uat_mon"
   color             = "blue"
   bootstrap_version = var.bootstrap_version
@@ -143,7 +143,7 @@ module "aws_deploy-uat_mon-eu-central-1" {
 }
 
 module "aws_deploy-uat_mon-us-west-2" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.0"
+  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.1"
   env               = "uat_mon"
   color             = "green"
   bootstrap_version = var.bootstrap_version
@@ -167,7 +167,7 @@ module "aws_deploy-uat_mon-us-west-2" {
 }
 
 module "aws_deploy-uat_mon-eu-north-1" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.0"
+  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.1"
   env               = "uat_mon"
   color             = "green"
   bootstrap_version = var.bootstrap_version
@@ -191,7 +191,7 @@ module "aws_deploy-uat_mon-eu-north-1" {
 }
 
 module "aws_deploy-uat_backup_full-eu-central-1" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.0"
+  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.1"
   env               = "uat_backup"
   kind              = "full"
   bootstrap_version = var.bootstrap_version
@@ -214,7 +214,7 @@ module "aws_deploy-uat_backup_full-eu-central-1" {
 }
 
 module "aws_deploy-uat_backup_light-eu-central-1" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.0"
+  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.1"
   env               = "uat_backup"
   kind              = "light"
   bootstrap_version = var.bootstrap_version
