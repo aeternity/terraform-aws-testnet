@@ -40,7 +40,7 @@ commands:
       - run:
           name: Terraform validate
           command: |
-            terraform -chdir=<< parameters.path >> validate -
+            terraform -chdir=<< parameters.path >> validate
 
   terraform_plan:
     parameters:
