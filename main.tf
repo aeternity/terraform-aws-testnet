@@ -11,7 +11,7 @@ module "aws_deploy-ap-southeast-1" {
   spot_nodes_max = 4
 
   additional_storage      = true
-  additional_storage_size = 120
+  additional_storage_size = 240
 
   spot_price    = "0.07"
   instance_type = "m4.large"
@@ -35,7 +35,7 @@ module "aws_deploy-eu-central-1" {
   spot_nodes_max = 4
 
   additional_storage      = true
-  additional_storage_size = 120
+  additional_storage_size = 240
 
   spot_price    = "0.07"
   instance_type = "m4.large"
@@ -59,7 +59,7 @@ module "aws_deploy-us-west-2" {
   spot_nodes_max = 4
 
   additional_storage      = true
-  additional_storage_size = 120
+  additional_storage_size = 240
 
   spot_price    = "0.07"
   instance_type = "m5.large"
@@ -83,7 +83,7 @@ module "aws_deploy-uat-eu-north-1" {
   spot_nodes_max = 4
 
   additional_storage      = true
-  additional_storage_size = 120
+  additional_storage_size = 240
 
   spot_price    = "0.07"
   instance_type = "m5.large"
@@ -107,7 +107,7 @@ module "aws_deploy-uat_mon-ap-southeast-1" {
   spot_nodes_max = 1
 
   additional_storage      = true
-  additional_storage_size = 120
+  additional_storage_size = 240
 
   spot_price    = "0.07"
   instance_type = "t3.medium"
@@ -131,7 +131,7 @@ module "aws_deploy-uat_mon-eu-central-1" {
   spot_nodes_max = 1
 
   additional_storage      = true
-  additional_storage_size = 120
+  additional_storage_size = 240
 
   spot_price    = "0.07"
   instance_type = "t3.medium"
@@ -155,7 +155,7 @@ module "aws_deploy-uat_mon-us-west-2" {
   spot_nodes_max = 1
 
   additional_storage      = true
-  additional_storage_size = 120
+  additional_storage_size = 240
 
   spot_price    = "0.07"
   instance_type = "t3.medium"
@@ -179,7 +179,7 @@ module "aws_deploy-uat_mon-eu-north-1" {
   spot_nodes_max = 1
 
   additional_storage      = true
-  additional_storage_size = 120
+  additional_storage_size = 240
 
   spot_price    = "0.07"
   instance_type = "t3.medium"
@@ -202,7 +202,7 @@ module "aws_deploy-uat_backup_full-eu-central-1" {
   static_nodes = 1
 
   additional_storage      = true
-  additional_storage_size = 180
+  additional_storage_size = 300
 
   spot_price    = 0.00
   instance_type = "t3.medium"
@@ -225,7 +225,7 @@ module "aws_deploy-uat_backup_light-eu-central-1" {
   static_nodes = 1
 
   additional_storage      = true
-  additional_storage_size = 180
+  additional_storage_size = 300
 
   spot_price    = 0.00
   instance_type = "t3.medium"
