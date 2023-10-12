@@ -1,21 +1,31 @@
 module "aws_deploy-ap-southeast-1" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.1"
-  env               = "uat"
-  color             = "blue"
-  bootstrap_version = var.bootstrap_version
-  vault_role        = "ae-node"
-  vault_addr        = var.vault_addr
+  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.0.1"
+  env    = "uat"
 
   static_nodes   = 1
   spot_nodes_min = 4
   spot_nodes_max = 4
 
+  instance_type  = "m5.large"
+  instance_types = ["m6i.large", "m5d.large", "m5.large"]
+  ami_name       = "aeternity-ubuntu-18.04-v1653564902"
+
+  root_volume_size        = 8
   additional_storage      = true
   additional_storage_size = 240
 
-  spot_price    = "0.07"
-  instance_type = "m5.large"
-  ami_name      = "aeternity-ubuntu-18.04-v1653564902"
+  tags = {
+    role  = "aenode"
+    env   = "uat"
+    color = "blue"
+  }
+
+  config_tags = {
+    bootstrap_version = var.bootstrap_version
+    vault_role        = "ae-node"
+    vault_addr        = var.vault_addr
+    node_config       = "secret/aenode/config/uat"
+  }
 
   providers = {
     aws = aws.ap-southeast-1
@@ -23,23 +33,33 @@ module "aws_deploy-ap-southeast-1" {
 }
 
 module "aws_deploy-eu-central-1" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.1"
-  env               = "uat"
-  color             = "blue"
-  bootstrap_version = var.bootstrap_version
-  vault_role        = "ae-node"
-  vault_addr        = var.vault_addr
+  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.0.1"
+  env    = "uat"
 
   static_nodes   = 1
   spot_nodes_min = 4
   spot_nodes_max = 4
 
+  instance_type  = "m5.large"
+  instance_types = ["m6i.large", "m5d.large", "m5.large"]
+  ami_name       = "aeternity-ubuntu-18.04-v1653564902"
+
+  root_volume_size        = 8
   additional_storage      = true
   additional_storage_size = 240
 
-  spot_price    = "0.07"
-  instance_type = "m5.large"
-  ami_name      = "aeternity-ubuntu-18.04-v1653564902"
+  tags = {
+    role  = "aenode"
+    env   = "uat"
+    color = "blue"
+  }
+
+  config_tags = {
+    bootstrap_version = var.bootstrap_version
+    vault_role        = "ae-node"
+    vault_addr        = var.vault_addr
+    node_config       = "secret/aenode/config/uat"
+  }
 
   providers = {
     aws = aws.eu-central-1
@@ -47,23 +67,33 @@ module "aws_deploy-eu-central-1" {
 }
 
 module "aws_deploy-us-west-2" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.1"
-  env               = "uat"
-  color             = "green"
-  bootstrap_version = var.bootstrap_version
-  vault_role        = "ae-node"
-  vault_addr        = var.vault_addr
+  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.0.1"
+  env    = "uat"
 
   static_nodes   = 1
   spot_nodes_min = 4
   spot_nodes_max = 4
 
+  instance_type  = "m5.large"
+  instance_types = ["m6i.large", "m5d.large", "m5.large"]
+  ami_name       = "aeternity-ubuntu-18.04-v1653564902"
+
+  root_volume_size        = 8
   additional_storage      = true
   additional_storage_size = 240
 
-  spot_price    = "0.07"
-  instance_type = "m5.large"
-  ami_name      = "aeternity-ubuntu-18.04-v1653564902"
+  tags = {
+    role  = "aenode"
+    env   = "uat"
+    color = "green"
+  }
+
+  config_tags = {
+    bootstrap_version = var.bootstrap_version
+    vault_role        = "ae-node"
+    vault_addr        = var.vault_addr
+    node_config       = "secret/aenode/config/uat"
+  }
 
   providers = {
     aws = aws.us-west-2
@@ -71,23 +101,33 @@ module "aws_deploy-us-west-2" {
 }
 
 module "aws_deploy-uat-eu-north-1" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.1"
-  env               = "uat"
-  color             = "green"
-  bootstrap_version = var.bootstrap_version
-  vault_role        = "ae-node"
-  vault_addr        = var.vault_addr
+  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.0.1"
+  env    = "uat"
 
   static_nodes   = 1
   spot_nodes_min = 4
   spot_nodes_max = 4
 
+  instance_type  = "m5.large"
+  instance_types = ["m6i.large", "m5d.large", "m5.large"]
+  ami_name       = "aeternity-ubuntu-18.04-v1653564902"
+
+  root_volume_size        = 8
   additional_storage      = true
   additional_storage_size = 240
 
-  spot_price    = "0.07"
-  instance_type = "m5.large"
-  ami_name      = "aeternity-ubuntu-18.04-v1653564902"
+  tags = {
+    role  = "aenode"
+    env   = "uat"
+    color = "green"
+  }
+
+  config_tags = {
+    bootstrap_version = var.bootstrap_version
+    vault_role        = "ae-node"
+    vault_addr        = var.vault_addr
+    node_config       = "secret/aenode/config/uat"
+  }
 
   providers = {
     aws = aws.eu-north-1
@@ -95,23 +135,32 @@ module "aws_deploy-uat-eu-north-1" {
 }
 
 module "aws_deploy-uat_mon-eu-central-1" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.1"
-  env               = "uat_mon"
-  color             = "green"
-  bootstrap_version = var.bootstrap_version
-  vault_role        = "ae-node"
-  vault_addr        = var.vault_addr
-  node_config       = "secret/aenode/config/uat_mon@eu-central-1"
+  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.0.1"
+  env    = "uat_mon"
 
   spot_nodes_min = 1
   spot_nodes_max = 1
 
+  instance_type  = "t3.medium"
+  instance_types = ["t3.medium", "t3.large", "c6i.large"]
+  ami_name       = "aeternity-ubuntu-18.04-v1653564902"
+
+  root_volume_size        = 8
   additional_storage      = true
   additional_storage_size = 240
 
-  spot_price    = "0.07"
-  instance_type = "t3.medium"
-  ami_name      = "aeternity-ubuntu-18.04-v1653564902"
+  tags = {
+    role  = "aenode"
+    env   = "uat_mon"
+    color = "green"
+  }
+
+  config_tags = {
+    bootstrap_version = var.bootstrap_version
+    vault_role        = "ae-node"
+    vault_addr        = var.vault_addr
+    node_config       = "secret/aenode/config/uat_mon@eu-central-1"
+  }
 
   providers = {
     aws = aws.eu-central-1
@@ -119,22 +168,31 @@ module "aws_deploy-uat_mon-eu-central-1" {
 }
 
 module "aws_deploy-uat_backup_full-eu-central-1" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.1"
-  env               = "uat_backup"
-  kind              = "full"
-  bootstrap_version = var.bootstrap_version
-  vault_role        = "ae-node"
-  vault_addr        = var.vault_addr
-  node_config       = "secret/aenode/config/uat_backup_full"
+  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.0.1"
+  env    = "uat_backup"
 
   static_nodes = 1
 
+  instance_type  = "t3.medium"
+  instance_types = ["t3.medium", "t3.large", "c6i.large"]
+  ami_name       = "aeternity-ubuntu-18.04-v1653564902"
+
+  root_volume_size        = 8
   additional_storage      = true
   additional_storage_size = 300
 
-  spot_price    = 0.00
-  instance_type = "t3.medium"
-  ami_name      = "aeternity-ubuntu-18.04-v1653564902"
+  tags = {
+    role = "aenode"
+    env  = "uat_backup"
+    kind = "full"
+  }
+
+  config_tags = {
+    bootstrap_version = var.bootstrap_version
+    vault_role        = "ae-node"
+    vault_addr        = var.vault_addr
+    node_config       = "secret/aenode/config/uat_backup_full"
+  }
 
   providers = {
     aws = aws.eu-central-1
@@ -142,22 +200,31 @@ module "aws_deploy-uat_backup_full-eu-central-1" {
 }
 
 module "aws_deploy-uat_backup_light-eu-central-1" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.6.1"
-  env               = "uat_backup"
-  kind              = "light"
-  bootstrap_version = var.bootstrap_version
-  vault_role        = "ae-node"
-  vault_addr        = var.vault_addr
-  node_config       = "secret/aenode/config/uat_backup_light"
+  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.0.1"
+  env    = "uat_backup"
 
   static_nodes = 1
 
+  instance_type  = "t3.medium"
+  instance_types = ["t3.medium", "t3.large", "c6i.large"]
+  ami_name       = "aeternity-ubuntu-18.04-v1653564902"
+
+  root_volume_size        = 8
   additional_storage      = true
   additional_storage_size = 300
 
-  spot_price    = 0.00
-  instance_type = "t3.medium"
-  ami_name      = "aeternity-ubuntu-18.04-v1653564902"
+  tags = {
+    role = "aenode"
+    env  = "uat_backup"
+    kind = "light"
+  }
+
+  config_tags = {
+    bootstrap_version = var.bootstrap_version
+    vault_role        = "ae-node"
+    vault_addr        = var.vault_addr
+    node_config       = "secret/aenode/config/uat_backup_light"
+  }
 
   providers = {
     aws = aws.eu-central-1
