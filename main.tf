@@ -3,8 +3,8 @@ module "aws_deploy-ap-southeast-1" {
   env    = "uat"
 
   static_nodes   = 1
-  spot_nodes_min = 4
-  spot_nodes_max = 4
+  spot_nodes_min = 2
+  spot_nodes_max = 2
 
   instance_type  = "m5.large"
   instance_types = ["m6i.large", "m5d.large", "m5.large"]
@@ -37,8 +37,8 @@ module "aws_deploy-eu-central-1" {
   env    = "uat"
 
   static_nodes   = 1
-  spot_nodes_min = 4
-  spot_nodes_max = 4
+  spot_nodes_min = 2
+  spot_nodes_max = 2
 
   instance_type  = "m5.large"
   instance_types = ["m6i.large", "m5d.large", "m5.large"]
@@ -71,8 +71,8 @@ module "aws_deploy-us-west-2" {
   env    = "uat"
 
   static_nodes   = 1
-  spot_nodes_min = 4
-  spot_nodes_max = 4
+  spot_nodes_min = 2
+  spot_nodes_max = 2
 
   instance_type  = "m5.large"
   instance_types = ["m6i.large", "m5d.large", "m5.large"]
@@ -105,8 +105,8 @@ module "aws_deploy-uat-eu-north-1" {
   env    = "uat"
 
   static_nodes   = 1
-  spot_nodes_min = 4
-  spot_nodes_max = 4
+  spot_nodes_min = 2
+  spot_nodes_max = 2
 
   instance_type  = "m5.large"
   instance_types = ["m6i.large", "m5d.large", "m5.large"]
