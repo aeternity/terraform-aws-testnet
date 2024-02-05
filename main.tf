@@ -37,8 +37,8 @@ module "aws_deploy-eu-central-1" {
   env    = "uat"
 
   static_nodes   = 1
-  spot_nodes_min = 2
-  spot_nodes_max = 2
+  spot_nodes_min = 0
+  spot_nodes_max = 0
 
   instance_type  = "m5.large"
   instance_types = ["m6i.large", "m5d.large", "m5.large"]
@@ -105,8 +105,8 @@ module "aws_deploy-uat-eu-north-1" {
   env    = "uat"
 
   static_nodes   = 1
-  spot_nodes_min = 2
-  spot_nodes_max = 2
+  spot_nodes_min = 1
+  spot_nodes_max = 1
 
   instance_type  = "m5.large"
   instance_types = ["m6i.large", "m5d.large", "m5.large"]
