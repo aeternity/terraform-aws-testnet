@@ -134,7 +134,7 @@ module "aws_deploy-uat-eu-north-1" {
   }
 }
 
-module "aws_deploy-uat_mon-eu-central-1" {
+module "aws_deploy-uat_mon" {
   source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.1.0"
   env    = "uat_mon"
 
@@ -163,11 +163,11 @@ module "aws_deploy-uat_mon-eu-central-1" {
   }
 
   providers = {
-    aws = aws.eu-central-1
+    aws = aws.eu-north-1
   }
 }
 
-module "aws_deploy-uat_backup_full-eu-central-1" {
+module "aws_deploy-uat_backup_full" {
   source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.1.0"
   env    = "uat_backup"
 
@@ -195,11 +195,11 @@ module "aws_deploy-uat_backup_full-eu-central-1" {
   }
 
   providers = {
-    aws = aws.eu-central-1
+    aws = aws.eu-north-1
   }
 }
 
-module "aws_deploy-uat_backup_light-eu-central-1" {
+module "aws_deploy-uat_backup_light" {
   source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.1.0"
   env    = "uat_backup"
 
@@ -227,6 +227,6 @@ module "aws_deploy-uat_backup_light-eu-central-1" {
   }
 
   providers = {
-    aws = aws.eu-central-1
+    aws = aws.eu-north-1
   }
 }
