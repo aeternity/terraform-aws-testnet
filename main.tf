@@ -7,7 +7,7 @@ module "aws_deploy-ap-southeast-1" {
   spot_nodes_max = 2
 
   instance_type  = "m5.large"
-  instance_types = ["m6i.large", "m5d.large", "m5.large"]
+  instance_types = ["m6i.large", "m5.large"]
   ami_name       = "aeternity-ubuntu-22.04-v1709639419"
 
   root_volume_size        = 20
@@ -41,7 +41,7 @@ module "aws_deploy-eu-central-1" {
   spot_nodes_max = 0
 
   instance_type  = "m5.large"
-  instance_types = ["m6i.large", "m5d.large", "m5.large"]
+  instance_types = ["m6i.large", "m5.large"]
   ami_name       = "aeternity-ubuntu-22.04-v1709639419"
 
   root_volume_size        = 20
@@ -75,7 +75,7 @@ module "aws_deploy-us-west-2" {
   spot_nodes_max = 2
 
   instance_type  = "m5.large"
-  instance_types = ["m6i.large", "m5d.large", "m5.large"]
+  instance_types = ["m6i.large", "m5.large"]
   ami_name       = "aeternity-ubuntu-22.04-v1709639419"
 
   root_volume_size        = 20
@@ -109,7 +109,7 @@ module "aws_deploy-uat-eu-north-1" {
   spot_nodes_max = 1
 
   instance_type  = "m5.large"
-  instance_types = ["m6i.large", "m5d.large", "m5.large"]
+  instance_types = ["m6i.large", "m5.large"]
   ami_name       = "aeternity-ubuntu-22.04-v1709639419"
 
   root_volume_size        = 20
