@@ -32,40 +32,6 @@ module "aws_deploy-ap-southeast-1" {
   }
 }
 
-module "aws_deploy-eu-central-1" {
-  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.4.0"
-  env    = "uat"
-
-  static_nodes   = 1
-  spot_nodes_min = 0
-  spot_nodes_max = 0
-
-  instance_type  = "m5.large"
-  instance_types = ["m6i.large", "m5.large"]
-  ami_name       = "aeternity-ubuntu-22.04-v1709639419"
-
-  root_volume_size        = 20
-  additional_storage      = true
-  additional_storage_size = 240
-
-  tags = {
-    role  = "aenode"
-    env   = "uat"
-    color = "blue"
-  }
-
-  config_tags = {
-    vault_role        = "ae-node"
-    vault_addr        = var.vault_addr
-    bootstrap_version = var.bootstrap_version
-    bootstrap_config  = "secret2/aenode/config/uat"
-  }
-
-  providers = {
-    aws = aws.eu-central-1
-  }
-}
-
 module "aws_deploy-us-west-2" {
   source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.4.0"
   env    = "uat"
