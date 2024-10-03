@@ -1,5 +1,5 @@
 module "aws_deploy-ap-southeast-1" {
-  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.4.0"
+  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v4.0.0"
   env    = "uat"
 
   static_nodes   = 1
@@ -33,7 +33,7 @@ module "aws_deploy-ap-southeast-1" {
 }
 
 module "aws_deploy-us-west-2" {
-  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.4.0"
+  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v4.0.0"
   env    = "uat"
 
   static_nodes   = 1
@@ -67,7 +67,7 @@ module "aws_deploy-us-west-2" {
 }
 
 module "aws_deploy-uat-eu-north-1" {
-  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.4.0"
+  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v4.0.0"
   env    = "uat"
 
   static_nodes   = 1
@@ -101,7 +101,7 @@ module "aws_deploy-uat-eu-north-1" {
 }
 
 module "aws_deploy-uat_mon" {
-  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.4.0"
+  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v4.0.0"
   env    = "uat_mon"
 
   spot_nodes_min = 1
@@ -134,7 +134,7 @@ module "aws_deploy-uat_mon" {
 }
 
 module "aws_deploy-uat_backup_full" {
-  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.4.0"
+  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v4.0.0"
   env    = "uat_backup"
 
   static_nodes = 1
@@ -166,7 +166,7 @@ module "aws_deploy-uat_backup_full" {
 }
 
 module "aws_deploy-uat_backup_light" {
-  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.4.0"
+  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v4.0.0"
   env    = "uat_backup"
 
   static_nodes = 1
