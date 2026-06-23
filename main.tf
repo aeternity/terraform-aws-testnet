@@ -104,8 +104,7 @@ module "aws_deploy-uat_mon" {
   source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v4.0.0"
   env    = "uat_mon"
 
-  spot_nodes_min = 1
-  spot_nodes_max = 1
+  static_nodes = 1
 
   instance_type  = "t3.medium"
   instance_types = ["t3.medium", "t3.large", "c6i.large"]
