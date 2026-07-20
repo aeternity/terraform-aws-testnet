@@ -107,8 +107,7 @@ module "aws_deploy-uat_mon" {
   static_nodes = 1
 
   # 2026-07-20: t3.medium -> m6i.large — HIGHEST PRIORITY fix. CPUCreditBalance=0 every single
-  # day of the 7-day window (continuously hard-throttled to 30% baseline). See gitops-all
-  # investigation doc §6.
+  # day of the 7-day window (continuously hard-throttled to 30% baseline).
   instance_type  = "m6i.large"
   instance_types = ["m6i.large", "c6i.large", "t3.medium"]
   ami_name       = "aeternity-ubuntu-22.04-v1709639419"
